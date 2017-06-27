@@ -1,0 +1,6 @@
+webrtcvad
+pyaudio
+wave
+librosa
+numpy
+tensorflow
