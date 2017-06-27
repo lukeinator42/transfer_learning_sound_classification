@@ -26,7 +26,7 @@ stream = audio.open(format=FORMAT, channels=CHANNELS,
 
 
     # Unpersists graph from file
-with tf.gfile.FastGFile("saved_models/retrained_graph_long.pb", 'rb') as f:
+with tf.gfile.FastGFile("saved_models/retrained_graph_longest.pb", 'rb') as f:
     graph_def = tf.GraphDef()
     graph_def.ParseFromString(f.read())
     tf.import_graph_def(graph_def, name='')
@@ -97,7 +97,7 @@ with tf.Session() as sess:
 
         # Loads label file, strips off carriage return
         label_lines = [line.rstrip() for line
-                           in tf.gfile.GFile("saved_models/retrained_labels_long.txt")]
+                           in tf.gfile.GFile("saved_models/retrained_labels_longest.txt")]
 
         predictions = sess.run(softmax_tensor, \
                  {'DecodeJpeg/contents:0': image_data})
