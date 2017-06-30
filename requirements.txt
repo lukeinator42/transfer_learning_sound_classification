@@ -4,3 +4,4 @@ wave
 librosa
 numpy
 tensorflow
+matplotlib
