@@ -44,7 +44,7 @@ In this spectrogram, we can see many frequencies that are multiples of the funda
 
 The other nice thing about using the spectrogram is that we have now changed the problem into one of image classification, which has seen lots of breakthroughs recently.
 
-Here is a script that will convert each wav file into a spectrogram. Each spectrogram is stored in a folder corresponding to it's category.
+Here is a script that will convert each wav file into a spectrogram. Each spectrogram is stored in a folder corresponding to its category.
 
 ```
 import csv
