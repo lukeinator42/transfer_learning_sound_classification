@@ -122,7 +122,7 @@ In another terminal tab, you can run
 tensorboard --logdir training_summaries
 ```
 
-to start a tensorboard, which will let us watch the training progress and accuracy in our browser. After around 16k iterations the accuracy tops off at around 84% on the validation set. Not bad for a fairly naive approach to sound classification.
+to start a tensorboard, which will let us watch the training progress and accuracy in our browser. After around 16k iterations the accuracy tops off at ~86% on the validation set. Not bad for a fairly naive approach to sound classification.
 
 ![Accuracy](screenshots/accuracy.png)
 ![Legend](screenshots/legend.png)
