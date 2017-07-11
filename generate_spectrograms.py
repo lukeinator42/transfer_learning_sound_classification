@@ -1,4 +1,4 @@
-
+2
 # coding: utf-8
 
 # In[43]:
@@ -23,7 +23,7 @@ with open('metadata/UrbanSound8K.csv') as csvfile:
         if count == 0:
             continue
             
-        
+        print count    
         if not os.path.exists('spectrograms/' + row[7]):
             os.makedirs('spectrograms/' + row[7])
             
@@ -52,7 +52,7 @@ with open('metadata/UrbanSound8K.csv') as csvfile:
         plt.close()
         
         #print count
-        print '{0}\r'.format(count),
+
         
 
 

@@ -5,3 +5,4 @@ librosa
 numpy
 tensorflow
 matplotlib
+python-tk
