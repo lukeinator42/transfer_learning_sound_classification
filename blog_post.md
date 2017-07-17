@@ -2,7 +2,7 @@
 
 Identifying sounds in the environment around us is something we as humans do quickly and easily everyday, and yet it is fairly difficult for computers to do this. If computers could accurately identify sounds, this would have lots of applications for robotics, security, and many other areas.
 
-Recently there have been many developments related to computer vision. Through advances in deep learning and the creation of large datasets such as [ImageNet](http://www.image-net.org/) for training deep learning models, computer vision has seen huge improvements.
+Recently there have been many developments related to computer vision, through advances in deep learning and the creation of large datasets such as [ImageNet](http://www.image-net.org/) for training deep learning models.
 
 The area of auditory perception, however, hasn't quite caught up to computer vision. Google recently released [AudioSet](https://research.google.com/audioset/), a large scale dataset of annotated sounds. Hopefully we'll start to see major improvements in sound classification and similar areas.
 
@@ -27,9 +27,9 @@ Each sound recording is ~4s in length. The dataset is organized into 10 folds. W
 
 ## Features
 
-There are many different features we can train our model on. In the related field of speech recognition, the  Mel-frequency cepstral coefficients (MFCC) is commonly used. The nice thing about MFCC's are that they are a very sparse representation of the original audio, which is usually sampled at 16khz for machine learning.
+There are many different features we can train our model on. In the related field of speech recognition, the  Mel-frequency cepstral coefficients (MFCC) is commonly used. The nice thing about MFCC's are that they are a very sparse representation of the original audio, which is usually sampled at 16khz in most research datasets.
 
-Recently, however, there has been a move to train models directly on the raw data or preserve most features of the raw data. For example, DeepMind designed a convolutional architecture called [WaveNet](https://deepmind.com/blog/wavenet-generative-model-raw-audio/) to generate audio. These WaveNets are trained on the raw audio, and not only can they be used generation, they can also be used for speech recognition and other classification tasks.
+Recently, however, there has been a shift towards training models directly on the raw data. For example, DeepMind designed a convolutional architecture called [WaveNet](https://deepmind.com/blog/wavenet-generative-model-raw-audio/) to generate audio. These WaveNets are trained on the raw audio, and not only can they be used generation, they can also be used for speech recognition and other classification tasks.
 
 It would be nice to be able to train a model on more information than the MFCC features, but WaveNets can be computationally expensive to both train and run. What if there was a feature that retained lots of information about the original signal, but was also computationally cheap to train?
 
@@ -89,7 +89,7 @@ with open('metadata/UrbanSound8K.csv') as csvfile:
 
 ## Using Convolutional Neural Networks
 
-Now the sounds are represented as images, we can classify them using a neural network. The neural network of choice for most image processing tasks is a Convolutional Neural Network (CNN).
+Now that the sounds are represented as images, we can classify them using a neural network. The neural network of choice for most image processing tasks is a Convolutional Neural Network (CNN).
 
 The problem with using the UrbanSound8K dataset however is that it is fairly small for deep learning applications. If we were to train a CNN from scratch it would probably overfit to the data; which means that for example, it would memorize all the sounds of dogs barking in UrbanSound8K but would be unable to generalize to the sound of other dog barks in the real world. There is an example of using a CNN for this dataset on Aaqib Saeed's blog [here](http://aqibsaeed.github.io/2016-09-24-urban-sound-classification-part-2/). We are going to take a different approach however and use transfer learning.  
 
@@ -255,3 +255,5 @@ The script was adapted from this [gist](https://gist.github.com/mabdrabo/8678538
 ## Next Steps
 
 In this post we saw how to classify sounds by applying transfer learning from the image classification domain. There is definitely room for improvement by tweaking the parameters of the retraining, or by training a model from scratch on the spectrograms. I'm also hoping to train a model to classify sounds using a [WaveNet](https://deepmind.com/blog/wavenet-generative-model-raw-audio/) next.
+
+You can view the code for this tutorial [here](https://github.com/lukeinator42/transfer_learning_sound_classification).
