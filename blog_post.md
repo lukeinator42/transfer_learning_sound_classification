@@ -1,6 +1,6 @@
 # Transfer Learning for Sound Classification
 
-Identifying sounds in the environment around us is something we as humans do quickly and easily everyday. However, is it easy for computers to perform this task? If computers could accurately identify sounds, this would have lots of applications for robotics, security, and many other areas.
+Identifying sounds in the environment around us is something we as humans do quickly and easily everyday, and yet it is fairly difficult for computers to do this. If computers could accurately identify sounds, this would have lots of applications for robotics, security, and many other areas.
 
 Recently there have been many developments related to computer vision. Through advances in deep learning and the creation of large datasets such as [ImageNet](http://www.image-net.org/) for training deep learning models, computer vision has seen huge improvements.
 
